@@ -1,0 +1,159 @@
+.container-banner{
+  background-color: #ffa827;
+  position: relative;
+  bottom: 22px;
+}
+
+
+.container-form{
+  background-color: white;
+  position: relative;
+  top: 60px;
+  left: 220px;
+  width: 1000px;
+}
+
+
+.content-header-logo {
+  position: relative;
+  left: 220px;
+  object-fit: cover;
+  max-width: 400px;
+}
+
+.content-header-title {
+  font-size: 36px;
+  font-weight: 400;
+  position: relative;
+  left: 300px;
+}
+
+.content-header-subtitle {
+  font-size: 18px;
+  font-weight: 400;
+  color: slategrey;
+  position: relative;
+  left: 220px;
+}
+
+.inputCodFat{
+  width: 400px;
+  border: 2px solid black;
+  margin-right: 28px;
+  border-radius: 8px;
+}
+
+.invoice-input{
+  position: relative;
+  left: 410px;
+  bottom: 50px;
+  width: 420px;
+  border: 2px solid black;
+  margin-left: 6px;
+  border-radius: 8px;
+}
+
+#i{
+  position: relative;
+  top: 10px;
+  right: 430px;
+}
+
+i{
+  position: relative;
+  bottom: 48px;
+  right: 45px;
+}
+
+.label-amout{
+  position: relative;
+  left: 605px;
+  bottom: 18px;
+}
+
+.mathint{
+  position: relative;
+  top: 35px;
+  right: 430px;
+}
+.mathint2{
+  position: relative;
+  bottom: 18px;
+  right: 50px;
+}
+
+.mathint3{
+  position: relative;
+  bottom: 38px;
+  left: 55px;
+  font-size: 11px;
+
+}
+
+
+
+.home {
+  display: flex;
+  height: 100vh;
+  /*background-color: red;*/
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  /*justify-content: center;*/
+}
+
+.home-form{
+  width: 30rem;
+  padding: 1%;
+
+  border-radius: 3%;
+  box-shadow: 10px 10px 8px 10px #888888;
+}
+
+.home-alert{
+  font-size: .9rem;
+  padding: .75rem;
+  font-weight: 500;
+  border-radius: .75rem;
+  box-shadow: -2px 5px 20px 0 rgb(173 173 173 / 19%);
+  margin-bottom: 1rem;
+}
+
+.home-img {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
+  pointer-events: none;
+}
+
+.home-form form {
+
+  padding: 2rem 0;
+}
+
+.home-form button {
+  margin-top: .5rem;
+  background-color: #1f4287;
+  border-radius: .75rem;
+  border: 0;
+  padding: .5rem;
+  width: 100%;
+  color: white;
+  font-size: 1rem;
+}
+
+.home-img img {
+  width: 300px;
+}
+
+.home-btn{
+  margin-top: 1rem;
+}
+
+.pf-footer{
+  position: relative;
+  top: 580px;
+  text-align: center;
+}
+

@@ -1,0 +1,23 @@
+<div class="pf-main-container">
+  <div class="pf-header"></div>
+  <div class="pf-body container">
+      <div class="pf-body-content">
+          <form class="body-content-header" [formGroup]="contentFG">
+              <img class="content-header-logo" [src]="contentFG.controls['logo'].value">
+              <h3 class="content-header-subtitle">{{ contentFG.controls['subtitle'].value }}</h3>
+
+              <div class="row">
+                  <mat-form-field class="col-md-6 col-12" appearance="outline">
+                      <mat-label>Invoice #</mat-label>
+                      <input matInput formControlName="invoice" required>
+                      <mat-hint>*Required</mat-hint>
+                  </mat-form-field>
+
+                  <mat-form-field class="col-md-6 col-12" appearance="outline">
+                      <mat-label>Amount</mat-label>
+                      <input matInput class="invoice-input" formControlName="price" required currencyMask placeholder="0.00">
+                      <mat-icon matPrefix>attach_money</mat-icon>
+                      <mat-hint>*Required</mat-hint>
+                  </mat-form-field>
+              </div>
+          </form>

@@ -1,0 +1,75 @@
+<div class="pf-main-container">
+  <div class="pf-header"></div>
+
+  <div class="pf-body container">
+    <div class="pf-body-content">
+      <!--Formulario de Pagamento -->
+
+      <!--Parte do Logo e a descrição de insira valor e o num. da fatura a pagar-->
+       <form class="body-content-header" [formGroup]="contentFG">
+            <img class="content-header-logo" [src]="contentFG.controls['logo'].value">
+            <h3 class="content-header-subtitle">{{ contentFG.controls['subtitle'].value }}</h3>
+          <!--Parte do Logo e a descrição de insira valor e o num. da fatura a pagar-->
+
+          <!--Parte dos Inputs Invoice = Fatura amount = Quantidade Pagar -->
+          <div class="row">
+            <div class="col-md-6 col-12" appearance="outline">
+              <mat-hint class="mathint3"># Code</mat-hint>
+              <input class="inputCodFat" matInput formControlName="invoice" required>
+            <i id="i" class="fa fa-barcode" aria-hidden="true"></i>
+            <mat-hint class="mathint">*Required</mat-hint>
+
+            </div>
+            <div class="col-md-6 col-12" appearance="outline">
+              <mat-label class="label-amout">Amount</mat-label>
+              <input matInput class="invoice-input" formControlName="price"  placeholder=" Amount 0.00">
+              <i class="fa fa-usd" aria-hidden="true"></i>
+              <mat-hint class="mathint2">*Required</mat-hint>
+            </div>
+          </div>
+            <!--Parte dos Inputs Invoice = Fatura amount = Quantidade Pagar -->
+
+          </form>
+
+
+            <div class="checkout">
+              <div class="checkout-in">
+                <div class="checkout-customer">
+                  <div class="title">Olá, <span class="highlight">{{orderData?.name}}</span></div>
+                </div>
+
+                <div class="checkout-card">
+
+                  <form action="" [formGroup]="form" (submit)="initPay()">
+                    <div class="input input-amount">
+                      <label class="label">Quantia </label>
+                      <input type="text"  readonly formControlName="amount" placeholder="0.00">
+                      <span class="currency">USD</span>
+                    </div>
+                    <hr>
+                    <div class="input">
+                      <label class="label">Número do cartão</label>
+                      <div id="card"></div>
+                    </div>
+                    <hr>
+                    <div class="falling">
+                    <div class="input1">
+                      <label class="label">Data de vencimento</label>
+                      <div id="exp"></div>
+                    </div>
+                    <div class="input2">
+                      <label class="label">CVC</label>
+                      <div id="cvc"></div>
+                    </div>
+
+                    </div>
+
+
+                    <button [disabled]="form.invalid || form.disabled" class="button" type="submit">Pagar</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+
+
+

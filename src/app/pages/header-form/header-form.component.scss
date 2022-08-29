@@ -1,0 +1,252 @@
+
+.pf-main-container {
+  .pf-header {
+      width: 100%;
+      height: 200px;
+      background-color: #ffa827; //#fb6400
+      position: absolute;
+      top: 0;
+      z-index: -1;
+  }
+
+  .pf-body {
+      padding: 25px 0px;
+
+      .pf-body-content {
+        position: relative;
+        top: 50px;
+        left: 140px;
+          width: 50%;
+          height: auto;
+          background-color: white;
+          border-radius: 5px;
+          text-align: center;
+          padding: 10px 15%;
+
+          .body-content-header {
+              .content-header-logo {
+                  object-fit: cover;
+                  max-width: 400px;
+              }
+  
+              .content-header-title {
+                  font-size: 36px;
+                  font-weight: 400;
+              }
+  
+              .content-header-subtitle {
+                  font-size: 18px;
+                  font-weight: 400;
+                  color: slategrey;
+              }
+  
+              .content-header-price {
+                  padding: 12px 0px;
+                  margin-top: -12px;
+                  font-size: 28px;
+                  font-weight: 500;
+              }
+
+              .invoice-input {
+                  text-align: end;
+              }
+          }
+
+          .body-content-body {
+              border-radius: 5px;
+              border: 2px solid #f7f7f7;
+
+              .content-body-payment-options {
+                  display: flex;
+                  flex-direction: row;
+                  margin-left: 0px !important;
+                  margin-right: 0px !important;
+
+                  .payment-option {
+                      padding: 15px 0px;
+                      background-color: #f7f7f7;
+                      cursor: pointer;
+
+                      .payment-icon-active {
+                          color: #ffa827;
+                          transform: scale(1.25);
+                      }
+
+                      .payment-option-title {
+                          font-size: 16px;
+                          font-weight: 500;
+                      }
+
+                      .payment-option-title-active {
+                          color: #ffa827;
+                      }
+
+                      .payment-option-subtitle {
+                          font-size: 12px;
+                          font-weight: 500;
+                          color: slategrey;
+                      }
+                  }
+
+                  .payment-option-border::before {
+                      content: '';
+                      border-left: 2px solid #000;
+                      position: absolute;
+                      height: 75%;
+                      left: 0;
+                      top: 15%;
+                  }
+              }
+
+              .content-body-payment-errors {
+                  padding: 10px;
+                  margin-right: 0px;
+                  margin-left: 0px;
+                  display: flex;
+                  flex-direction: column;
+                  background-color: #FFF5F8;
+
+                  .payment-error-content {
+                      margin-left: auto;
+
+                      label {
+                          font-weight: bold;
+                          color: #F1416C;    
+                      }
+
+                      span {
+                          margin-left: 5px;
+                          color: #F1416C;
+                      }
+                  }
+              }
+
+              .payment-option-credit-card {
+                  padding: 16px;
+
+                  .payment-option-action {
+                      .payment-option-action-content {
+                          display: block;
+                          min-width: 300px;
+                          max-width: 400px;
+                          margin-left: auto;
+                          margin-right: auto;
+
+                          .label-total {
+                              padding: 5px;
+                              text-align: start;
+                              font-weight: 500;  
+                          }
+
+                          button {
+                              width: 100%;
+                          }
+
+                          .label-token {
+                              padding: 5px;
+                              text-align: end;
+                              font-weight: 400;  
+                          }
+                      }
+                  }
+
+                  .account-type {
+                      flex-direction: column;
+                      text-align: start;
+
+                      .account-type-radio-group {
+                          padding: 0px 15px;
+
+                          .account-type-radio-group-margin {
+                              margin-left: 10px;
+                          }
+                      }
+
+                      .account-type-label {
+                          padding: 0px 15px;
+                          font-size: 12px;
+                          font-weight: 500;
+                      }
+                  }
+
+                  .expiration-date-label {
+                      padding: 0px 15px;
+                      font-size: 12px;
+                      font-weight: 500;
+                  }
+              }
+          }
+      }
+  }
+
+  .pf-footer {
+      height: 64px;        
+      font-size: 14px;
+      font-weight: 500;
+      text-align: center;
+
+      .pf-footer-support {
+          padding: 5px 0px;
+
+          a {
+              margin-left: 5px;
+          }
+      }
+
+      .pf-footer-other-links {
+          padding: 5px 0px;
+
+          a {
+              padding: 0px 5px;
+              text-decoration: none;
+              color: #ffa827; 
+          }
+
+          a:hover {
+              text-decoration: underline;
+          }
+
+          .pf-footer-separator {
+              color: #000 !important;
+              text-decoration: none !important;
+          }
+      }
+  }
+}
+
+@media (max-width: 767px) {
+  .pf-main-container {
+      .pf-header {
+          height: 100px !important;
+      }
+  }
+
+  .pf-body {
+      padding: 25px 10px!important;
+
+      .pf-body-content {
+          padding: 10px 5% !important;
+          
+          .body-content-header {
+              .content-header-logo {
+                  max-width: 250px !important;
+              }
+          }
+
+          .body-content-body {
+              .payment-option-credit-card {
+                  .payment-option-action {
+                      padding-right: 0px !important;
+                      padding-left: 0px !important;
+
+                      .payment-option-action-content {
+                          min-width: auto !important;
+                          max-width: auto !important;
+                          width: 100% !important;
+                      }
+                  }
+              }
+          }
+      }
+  }
+}
